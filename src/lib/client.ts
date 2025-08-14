@@ -13,7 +13,7 @@ import mqttPacket, {
 	type QoS,
 	type ISubackPacket,
 	type IConnectPacket,
-} from 'mqtt-packet'
+} from '@jacoscaz/mqtt-packet-smol'
 import { Writable } from 'node:stream'
 import clone from 'rfdc/default'
 import _debug from 'debug'

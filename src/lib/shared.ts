@@ -1,4 +1,4 @@
-import type { Packet, ISubackPacket } from 'mqtt-packet'
+import type { Packet, ISubackPacket } from '@jacoscaz/mqtt-packet-smol'
 import type { Duplex as NativeDuplex } from 'node:stream'
 import type { Duplex } from 'node:stream'
 import type MqttClient from './client'

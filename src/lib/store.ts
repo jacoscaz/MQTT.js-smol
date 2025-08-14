@@ -2,7 +2,7 @@
  * Module dependencies
  */
 import { Readable } from 'node:stream'
-import { type Packet } from 'mqtt-packet'
+import { type Packet } from '@jacoscaz/mqtt-packet-smol'
 import { type DoneCallback } from './shared'
 
 const streamsOpts = { objectMode: true }

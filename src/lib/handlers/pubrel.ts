@@ -2,7 +2,7 @@ import {
 	type IPubcompPacket,
 	type IPublishPacket,
 	type IPubrelPacket,
-} from 'mqtt-packet'
+} from '@jacoscaz/mqtt-packet-smol'
 import { type PacketHandler } from '../shared'
 
 const handlePubrel: PacketHandler = (client, packet: IPubrelPacket, done) => {

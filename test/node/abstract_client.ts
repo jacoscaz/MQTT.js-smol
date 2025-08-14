@@ -10,7 +10,7 @@ import {
 	type IPubrelPacket,
 	type ISubackPacket,
 	type QoS,
-} from 'mqtt-packet'
+} from '@jacoscaz/mqtt-packet-smol'
 import { type DoneCallback, ErrorWithReasonCode } from 'src/lib/shared'
 import { fail } from 'assert'
 import { describe, it, beforeEach, afterEach, after } from 'node:test'

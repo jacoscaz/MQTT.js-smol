@@ -1,4 +1,4 @@
-import { type IConnackPacket } from 'mqtt-packet'
+import { type IConnackPacket } from '@jacoscaz/mqtt-packet-smol'
 import { ReasonCodes } from './ack'
 import TopicAliasSend from '../topic-alias-send'
 import { ErrorWithReasonCode, type PacketHandler } from '../shared'

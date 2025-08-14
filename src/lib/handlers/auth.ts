@@ -1,4 +1,4 @@
-import { type IAuthPacket } from 'mqtt-packet'
+import { type IAuthPacket } from '@jacoscaz/mqtt-packet-smol'
 import { ErrorWithReasonCode, type PacketHandler } from '../shared'
 import { ReasonCodes } from './ack'
 

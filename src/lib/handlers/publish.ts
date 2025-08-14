@@ -1,4 +1,4 @@
-import { type IPublishPacket } from 'mqtt-packet'
+import { type IPublishPacket } from '@jacoscaz/mqtt-packet-smol'
 import { type PacketHandler } from '../shared'
 
 const validReasonCodes = [0, 16, 128, 131, 135, 144, 145, 151, 153]
