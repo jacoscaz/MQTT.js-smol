@@ -120,7 +120,6 @@
     "rfdc": "^1.4.1",
     "socks": "^2.8.6",
     "split2": "^4.2.0",
-    "worker-timers": "^8.0.23",
     "ws": "^8.18.3"
   },
   "devDependencies": {
