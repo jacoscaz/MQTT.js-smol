@@ -37,7 +37,7 @@ export class BufferedDuplex extends Duplex {
 
 	private writeQueue: Array<{
 		chunk: any
-		encoding: string
+		encoding: BufferEncoding
 		cb: (err?: Error) => void
 	}>
 
@@ -66,7 +66,7 @@ export class BufferedDuplex extends Duplex {
 		this.proxy.read(size)
 	}
 
-	_write(chunk: any, encoding: string, cb: (err?: Error) => void) {
+	_write(chunk: any, encoding: BufferEncoding, cb: (err?: Error) => void) {
 		if (!this.isSocketOpen) {
 			// Buffer the data in a queue
 			this.writeQueue.push({ chunk, encoding, cb })
@@ -96,7 +96,7 @@ export class BufferedDuplex extends Duplex {
 
 	private writeToProxy(
 		chunk: any,
-		encoding: string,
+		encoding: BufferEncoding,
 		cb: (err?: Error) => void,
 	) {
 		if (this.proxy.write(chunk, encoding) === false) {
