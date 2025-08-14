@@ -115,8 +115,7 @@
     "mqtt-packet": "^9.0.2",
     "number-allocator": "^1.0.14",
     "rfdc": "^1.4.1",
-    "socks": "^2.8.6",
-    "split2": "^4.2.0"
+    "socks": "^2.8.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
