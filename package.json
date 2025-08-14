@@ -36,11 +36,6 @@
   ],
   "exports": {
     ".": {
-      "react-native": "./dist/mqtt.esm.js",
-      "browser": {
-        "import": "./dist/mqtt.esm.js",
-        "default": "./dist/mqtt.min.js"
-      },
       "default": "./build/index.js"
     },
     "./package.json": "./package.json",
@@ -100,12 +95,6 @@
   ],
   "engines": {
     "node": ">=16.0.0"
-  },
-  "browser": {
-    "./mqtt.js": "./dist/mqtt.js",
-    "fs": false,
-    "tls": false,
-    "net": false
   },
   "dependencies": {
     "@types/ws": "^8.18.1",
