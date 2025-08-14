@@ -112,12 +112,9 @@
   },
   "dependencies": {
     "@types/ws": "^8.18.1",
-    "commist": "^3.2.0",
     "concat-stream": "^2.0.0",
     "debug": "^4.4.1",
-    "help-me": "^5.0.0",
     "lru-cache": "^10.4.3",
-    "minimist": "^1.2.8",
     "mqtt-packet": "^9.0.2",
     "number-allocator": "^1.0.14",
     "rfdc": "^1.4.1",
