@@ -5,7 +5,7 @@ import type { TimerVariant } from './shared'
 export default class KeepaliveManager {
 	private _keepalive: number
 
-	private timerId: number
+	private timerId: NodeJS.Timeout
 
 	private timer: Timer
 
