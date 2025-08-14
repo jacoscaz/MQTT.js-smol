@@ -115,19 +115,10 @@ function connect(
 
 	if (opts.cert && opts.key) {
 		if (opts.protocol) {
-			if (['mqtts', 'wss', 'wxs', 'alis'].indexOf(opts.protocol) === -1) {
+			if (['mqtts'].indexOf(opts.protocol) === -1) {
 				switch (opts.protocol) {
 					case 'mqtt':
 						opts.protocol = 'mqtts'
-						break
-					case 'ws':
-						opts.protocol = 'wss'
-						break
-					case 'wx':
-						opts.protocol = 'wxs'
-						break
-					case 'ali':
-						opts.protocol = 'alis'
 						break
 					default:
 						throw new Error(

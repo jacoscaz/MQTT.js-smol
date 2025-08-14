@@ -14,11 +14,9 @@ import mqttPacket, {
 	type ISubackPacket,
 	type IConnectPacket,
 } from 'mqtt-packet'
-import { type DuplexOptions, Writable } from 'node:stream'
+import { Writable } from 'node:stream'
 import clone from 'rfdc/default'
 import _debug from 'debug'
-import type { ClientOptions } from 'ws'
-import { type ClientRequestArgs } from 'http'
 import * as validations from './validations'
 import Store, { type IStore } from './store'
 import handlePacket from './handlers'
@@ -67,17 +65,7 @@ const defaultConnectOptions: IClientOptions = {
 	timerVariant: 'auto',
 }
 
-export type BaseMqttProtocol =
-	| 'wss'
-	| 'ws'
-	| 'mqtt'
-	| 'mqtts'
-	| 'tcp'
-	| 'ssl'
-	| 'wx'
-	| 'wxs'
-	| 'ali'
-	| 'alis'
+export type BaseMqttProtocol = 'mqtt' | 'mqtts' | 'tcp' | 'ssl'
 
 // create a type that allows all MqttProtocol + `+unix` string
 export type MqttProtocolWithUnix = `${BaseMqttProtocol}+unix`
@@ -161,9 +149,6 @@ export interface IClientOptions extends ISecureClientOptions {
 	/** The `MqttProtocol` to use */
 	protocol?: MqttProtocol
 
-	/** Websocket options */
-	wsOptions?: ClientOptions | ClientRequestArgs | DuplexOptions
-
 	/**
 	 * 1000 milliseconds, interval between two reconnections
 	 */
@@ -207,15 +192,7 @@ export interface IClientOptions extends ISecureClientOptions {
 	servers?: Array<{
 		host: string
 		port: number
-		protocol?:
-			| 'wss'
-			| 'ws'
-			| 'mqtt'
-			| 'mqtts'
-			| 'tcp'
-			| 'ssl'
-			| 'wx'
-			| 'wxs'
+		protocol?: 'mqtt' | 'mqtts' | 'tcp' | 'ssl'
 	}>
 	/**
 	 * true, set to false to disable re-subscribe functionality
