@@ -97,8 +97,6 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
-    "@types/ws": "^8.18.1",
-    "concat-stream": "^2.0.0",
     "debug": "^4.4.1",
     "lru-cache": "^10.4.3",
     "mqtt-packet": "^9.0.2",
