@@ -14,7 +14,7 @@ import mqttPacket, {
 	type ISubackPacket,
 	type IConnectPacket,
 } from 'mqtt-packet'
-import { type DuplexOptions, Writable } from 'readable-stream'
+import { type DuplexOptions, Writable } from 'node:stream'
 import clone from 'rfdc/default'
 import _debug from 'debug'
 import type { ClientOptions } from 'ws'

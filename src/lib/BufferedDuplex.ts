@@ -1,4 +1,4 @@
-import { Duplex, type Transform } from 'readable-stream'
+import { Duplex, type Transform } from 'node:stream'
 import { Buffer } from 'buffer'
 import { type IClientOptions } from './client'
 

@@ -1,6 +1,6 @@
 import type { Packet, ISubackPacket } from 'mqtt-packet'
 import type { Duplex as NativeDuplex } from 'node:stream'
-import type { Duplex } from 'readable-stream'
+import type { Duplex } from 'node:stream'
 import type MqttClient from './client'
 import type { IClientOptions } from './client'
 

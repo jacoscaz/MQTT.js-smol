@@ -1,7 +1,7 @@
 import { Buffer } from 'buffer'
 import Ws, { type ClientOptions } from 'ws'
 import _debug from 'debug'
-import { Transform } from 'readable-stream'
+import { Transform } from 'node:stream'
 import { type IStream, type StreamBuilder } from '../shared'
 import isBrowser from '../is-browser'
 import { type IClientOptions } from '../client'
