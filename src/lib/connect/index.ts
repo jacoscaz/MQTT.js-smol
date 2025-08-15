@@ -135,42 +135,19 @@ function connect(
 	// only loads the protocols once
 	if (!protocols) {
 		protocols = {}
-		if (!isBrowser && !opts.forceNativeWebSocket) {
-			protocols.ws = require('./ws').streamBuilder
-			protocols.wss = require('./ws').streamBuilder
-
-			protocols.mqtt = require('./tcp').default
-			protocols.tcp = require('./tcp').default
-			protocols.ssl = require('./tls').default
-			protocols.tls = protocols.ssl
-			protocols.mqtts = require('./tls').default
-		} else {
-			protocols.ws = require('./ws').browserStreamBuilder
-			protocols.wss = require('./ws').browserStreamBuilder
-
-			protocols.wx = require('./wx').default
-			protocols.wxs = require('./wx').default
-
-			protocols.ali = require('./ali').default
-			protocols.alis = require('./ali').default
-		}
+		protocols.mqtt = require('./tcp').default
+		protocols.tcp = require('./tcp').default
+		protocols.ssl = require('./tls').default
+		protocols.tls = protocols.ssl
+		protocols.mqtts = require('./tls').default
 	}
 
 	if (!protocols[opts.protocol]) {
-		const isSecure = ['mqtts', 'wss'].indexOf(opts.protocol) !== -1
+		const isSecure = ['mqtts'].indexOf(opts.protocol) !== -1
 		// returns the first available protocol based on available protocols (that depends on environment)
 		// if no protocol is specified this will return mqtt on node and ws on browser
 		// if secure it will return mqtts on node and wss on browser
-		opts.protocol = [
-			'mqtt',
-			'mqtts',
-			'ws',
-			'wss',
-			'wx',
-			'wxs',
-			'ali',
-			'alis',
-		].filter((key, index) => {
+		opts.protocol = ['mqtt', 'mqtts'].filter((key, index) => {
 			if (isSecure && index % 2 === 0) {
 				// Skip insecure protocols when requesting a secure one.
 				return false

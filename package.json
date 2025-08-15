@@ -92,9 +92,9 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
+    "@jacoscaz/mqtt-packet-smol": "^9.0.2",
     "debug": "^4.4.1",
     "lru-cache": "^10.4.3",
-    "@jacoscaz/mqtt-packet-smol": "^9.0.2-alpha.1",
     "number-allocator": "^1.0.14",
     "rfdc": "^1.4.1",
     "socks": "^2.8.6"
@@ -118,6 +118,8 @@
     "chokidar": "^4.0.3",
     "conventional-changelog-cli": "^5.0.0",
     "end-of-stream": "^1.4.5",
+    "esbuild": "^0.25.9",
+    "esbuild-register": "^3.6.0",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
