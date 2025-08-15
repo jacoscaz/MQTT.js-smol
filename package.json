@@ -1,5 +1,5 @@
 {
-  "name": "mqtt",
+  "name": "@jacoscaz/mqtt-smol",
   "description": "A library for the MQTT protocol",
   "version": "5.14.0",
   "contributors": [
@@ -83,7 +83,7 @@
     }
   },
   "publishConfig": {
-    "provenance": true
+    "access": "public"
   },
   "pre-commit": [
     "lint"
